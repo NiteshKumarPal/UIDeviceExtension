@@ -1,0 +1,22 @@
+//This UIDevice extension is used for getting to know device's hardware relted information like device name, model , its generation
+
+
+these are its method you can take advantages :
+- (NSString *) platform; 
+- (NSString *) hwmodel;
+- (NSUInteger) platformType;  //check UIDevicePlatform  //platFormType: 19 (for iPad 3G) //it helpes for keeping conditions for defferent devices    
+- (NSString *) platformString; //eg. iPad 3G
+
+- (NSUInteger) cpuFrequency;
+- (NSUInteger) busFrequency;
+- (NSUInteger) cpuCount;
+- (NSUInteger) totalMemory;
+- (NSUInteger) userMemory;
+
+- (NSNumber *) totalDiskSpace;
+- (NSNumber *) freeDiskSpace;
+
+- (NSString *) macaddress;
+
+- (BOOL) hasRetinaDisplay;
+- (UIDeviceFamily) deviceFamily;  // it tells if it is iPhone, iPad, iPod or AppleTv
