@@ -1,4 +1,4 @@
-//This UIDevice extension is used for getting to know device's hardware relted information like device name, model , its generation
+//This UIDevice extension is used for getting to know device's hardware related information like device name, model , its generation etc.
 
 
 these are its method you can take advantages :
@@ -20,3 +20,37 @@ these are its method you can take advantages :
 
 - (BOOL) hasRetinaDisplay;
 - (UIDeviceFamily) deviceFamily;  // it tells if it is iPhone, iPad, iPod or AppleTv
+
+How to use ?
+---------------
+
+(Example:-)
+#import "UIDevice-Hardware.h"
+
+UIDevice *deviceInfo= [[UIDevice alloc]init];
+
+NSString *platformString = [deviceInfo platformString]; //device name with generation type
+int platformType= [deviceInfo platformType]; //from typedef enum number of that device in UIDevicePlatform 
+NSString *platform = [deviceInfo platform];
+int deviceFamily = [deviceInfo deviceFamily];
+    
+NSString *info = [@"platformString:" stringByAppendingFormat:@"%@ ,",platformString];
+info = [info stringByAppendingFormat:@"platformType: %d ,",platformType];
+info = [info stringByAppendingFormat:@"platform: %@ ,",platform];
+info = [info stringByAppendingFormat:@"deviceFamily: %d", deviceFamily];
+    
+    
+    
+        UIAlertView *alert1=[[UIAlertView alloc]initWithTitle:@"" message:info
+                                                     delegate:nil cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        [alert1 show];
+
+
+
+
+
+
+
+
+
+
